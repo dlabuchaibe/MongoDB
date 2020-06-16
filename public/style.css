@@ -1,0 +1,9 @@
+nav{
+    margin-bottom: 20px;
+}
+#weather, #tweets{
+    margin-top: 10px;
+}
+#card-weather{
+    width: 50%;
+}

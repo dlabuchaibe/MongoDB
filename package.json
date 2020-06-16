@@ -1,0 +1,23 @@
+{
+  "name": "routerexpress",
+  "version": "1.0.0",
+  "description": "router ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "router",
+    "api",
+    "rest"
+  ],
+  "author": "Daniel Abuchaibe",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.16",
+    "node-fetch": "^2.6.0"
+  }
+}

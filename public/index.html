@@ -1,0 +1,76 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Twitter</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body onload="getTweets(); getWeather('Barranquilla'); checkLogin();">
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+              <span class="navbar-brand mb-0 h1">My Twitter</span>
+            <div class="my-lg-0">
+              <a href="#" class="text-white" onclick="logout()" id="logout" style="display: none;"><small>Cerrar sesión</small></a>
+            </div>
+          </div>  
+    </nav>
+    <div class="container">
+        <div class="row justify-content-md-center"></div>
+        <div class="row">
+          <div class="col-sm">
+            <div class="card" id="card-login" style="display: none;">
+              <div class="card-body">
+                <h5 class="card-title">Inicio de sesión</h5>     
+                  <form onsubmit="return false">
+                    <div class="form-group"><input type="text" class="form-control" id="login-username"  placeholder="Nombre del usuario"></div>
+                    <div class="form-group"><input type="password" class="form-control" id="login-password"  placeholder="Clave"></div>
+                      <button type="submit" onclick="login()" class="btn btn-primary">Ingresar</button>
+                  </form>
+                </div>
+              </div> 
+              <div class="card" id="card-tweets" style="display: none;">
+                <div class="card-body">
+                  <h5 class="card-title">Nuevo tweet</h5> 
+                  <form onsubmit="return false">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="content" aria-describedby="contentHelp" placeholder="¿En qué estás pensando?">
+                        <small id="contentHelp" class="form-text text-muted">Envíanos un tweet</small>
+                      </div>
+                      <button type="submit" onclick="newTweet()" class="btn btn-primary">Enviar</button>
+                    </form>
+                 </div>
+              </div>      
+            <div id="tweets">No hay tweets para mostrar</div>
+          </div>
+          <div class="col-sm">
+
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Clima</h5>   
+                  <div id="weather" class="alert alert-primary" role="alert"></div>
+              </div>
+            </div>
+            <div class="card" id="card-signup" style="display: none;">
+              <div class="card-body">
+                <h5 class="card-title">Registro</h5>                  
+                  <form onsubmit="return false">
+                    <div class="form-group"><input type="text" class="form-control" id="name"  placeholder="Nombre completo"></div>
+                    <div class="form-group"><input type="email" class="form-control" id="email"  placeholder="Correo"></div>
+                    <div class="form-group"><input type="text" class="form-control" id="username"  placeholder="Nombre del usuario"></div>
+                    <div class="form-group"><input type="password" class="form-control" id="password"  placeholder="Clave"></div>
+                    <div class="form-group"><input type="password" class="form-control" id="passwordConfirm"  placeholder="Confirmar clave"></div>
+                      <button type="submit" onclick="newUser()" class="btn btn-primary">Crear usuario</button>
+                  </form>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+</body>
+</html>
