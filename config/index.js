@@ -1,15 +1,15 @@
 const config = {
     server: {
-        port: 80
+        port: process.env.SERVER_PORT
     },
     db: {
-        host: 'cluster0-4rayt.mongodb.net',
-        name: 'db_twitter',
-        user: 'twitter',
-        password: 'twitter_user'
+        host: process.env.DB_HOST,
+        name: process.env.DB_NAME,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD
     },
-    weatherApiKey:'ca684dfccee70c9b47f45029164a4a75',
-    saltRounds: 10,
-    tokenKey: "my-secret-key"
+    weatherApiKey: process.env.WEATHER_API_KEY,
+    saltRounds: process.env.SALT_ROUND,
+    tokenKey: process.env.TOKEN_KEY
 }
 module.exports = config;
