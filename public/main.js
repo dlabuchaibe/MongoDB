@@ -161,8 +161,8 @@ const getTweets = () => {
                  </div>
                 </div>
                 <br /> ${tweet.comments.map(comment => {
-                        return comment.userComment
-                    }).join(' ')}
+                        return `${comment.userId.name} respondió: <br/> ${comment.userComment}`
+                    }).join('<br />')}
                 </li>`
                 } else {
                     return `<li class="list-group-item">
