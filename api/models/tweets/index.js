@@ -9,6 +9,16 @@ const tweetSchema = new Schema({
     },
     user: {
         type: Schema.ObjectId, ref: 'users'
+    },
+    comments:{
+        type: Array,
+        userComment:{
+            type: String,
+            required: true
+        },
+        userId: {
+            type: Schema.ObjectId, ref: 'users'
+        }    
     }
 }, {
     timestamps: true

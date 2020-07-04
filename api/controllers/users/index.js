@@ -38,11 +38,8 @@ router.route('/')
                 });
             }    
         });
-
-        
     })
     .put(auth, (req, res)=>{
-
         res.status(200);
     })
     .delete(auth, (req, res)=>{

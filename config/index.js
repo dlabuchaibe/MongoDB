@@ -9,7 +9,7 @@ const config = {
         password: process.env.DB_PASSWORD
     },
     weatherApiKey: process.env.WEATHER_API_KEY,
-    saltRounds: process.env.SALT_ROUND,
+    saltRounds: parseInt(process.env.SALT_ROUND),
     tokenKey: process.env.TOKEN_KEY
 }
 module.exports = config;
