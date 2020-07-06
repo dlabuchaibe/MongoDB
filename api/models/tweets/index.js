@@ -10,8 +10,7 @@ const tweetSchema = new Schema({
     user: {
         type: Schema.ObjectId, ref: 'users'
     },
-    comments:{
-        type: Array,
+    comments:[{
         userComment:{
             type: String,
             required: true
@@ -19,7 +18,7 @@ const tweetSchema = new Schema({
         userId: {
             type: Schema.ObjectId, ref: 'users'
         }    
-    }
+    }]
 }, {
     timestamps: true
 });

@@ -10,9 +10,9 @@ router.route('/')
     .get((req, res)=>{
         Tweet.find({}, (err, tweets)=>{
             User.populate(tweets, {path: 'user'},(err, tweets)=>{
-               // User.populate(tweets.comments, {path:'userId'}, (err, tweetsComments) => {
+                User.populate(tweets, {path:'comments.userId'}, (err, tweetsComments) => {
                   res.status(200).send(tweetsComments);  
-            //    })
+                })
             })
         })
     })
